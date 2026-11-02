@@ -6,7 +6,7 @@ Site: https://ezrabrand.github.io/hyman-toldot-translation/
 
 | Entry | Page | Note |
 |---|---|---|
-| R' Abba (unqualified) | [r-abba-stam.html](https://ezrabrand.github.io/hyman-toldot-translation/r-abba-stam.html) | Short entry; complete |
+| R' Abba (stam) | [r-abba-stam.html](https://ezrabrand.github.io/hyman-toldot-translation/r-abba-stam.html) | Short entry; complete |
 | R' Yoḥanan | [r-yohanan.html](https://ezrabrand.github.io/hyman-toldot-translation/r-yohanan.html) | Long entry; only pp. 236–240 of pp. 236–255 are transcribed on Wikisource |
 
 ## Pipeline
@@ -16,13 +16,13 @@ Site: https://ezrabrand.github.io/hyman-toldot-translation/
 3. Add a summary (and tables where useful) at the top.
 4. Set each quoted source as a quote block: Hebrew first, with punctuation that matches the English, then the English, then the reference.
 
-Conventions: text in (parentheses) is Hyman's; text in [square brackets], shown in gray, is the translator's. The translations were made with Claude (an AI model) and have not been checked by a specialist.
+Conventions: text in (parentheses) is Hyman's; text in [square brackets], shown in gray, is the translator's. The translations were made with Claude.
 
 ## Related projects
 
 - [lewysohn-zoologie](https://github.com/EzraBrand/lewysohn-zoologie): Lewysohn, *Die Zoologie des Talmuds* (1858), OCR and translation
 - [talmud-zoology-factcheck](https://github.com/EzraBrand/talmud-zoology-factcheck): zoological claims of the Talmud checked against modern zoology
-- [low-flora](https://github.com/EzraBrand/low-flora): Löw, *Die Flora der Juden*, OCR and translation test
+- [low-flora](https://github.com/EzraBrand/low-flora): Löw, *Die Flora der Juden*, OCR and translation pilot
 - [bochart-hierozoicon](https://github.com/EzraBrand/bochart-hierozoicon): Bochart, *Hierozoicon*, pilot on the shafan
 - [abba-to-zebedee](https://github.com/EzraBrand/abba-to-zebedee): naming conventions in the Mishnah, Talmud and Midrash
 
