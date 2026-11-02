@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R' Yoḥanan</title>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --text: #222;
+    --muted: #666;
+    --accent: #7a4b1e;
+    --quote-bg: #f1ece3;
+    --quote-border: #b8894f;
+    --summary-bg: #eef3f7;
+    --summary-border: #4a7396;
+    --warn-bg: #fbf1dc;
+    --warn-border: #c99a2e;
+    --rule: #ddd5c8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1b19;
+      --text: #e6e2da;
+      --muted: #a39d92;
+      --accent: #e0b07a;
+      --quote-bg: #2a2723;
+      --quote-border: #a07a48;
+      --summary-bg: #1f2a33;
+      --summary-border: #6e98bb;
+      --warn-bg: #332a18;
+      --warn-border: #b38a2e;
+      --rule: #3a3631;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 18px/1.65 Georgia, "Times New Roman", serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+  .source { color: var(--muted); font-size: 0.9rem; margin: 0 0 4px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; color: var(--accent); }
+  h2 { font-size: 1.25rem; margin: 2.2em 0 0.6em; color: var(--accent); }
+  h3 { font-size: 1.05rem; margin: 1.6em 0 0.4em; }
+  .nav { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
+  .summary, .warn {
+    border-radius: 4px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    padding: 16px 20px;
+  }
+  .summary { background: var(--summary-bg); border-left: 4px solid var(--summary-border); }
+  .warn { background: var(--warn-bg); border-left: 4px solid var(--warn-border); margin-top: 16px; }
+  .summary h2 { margin-top: 0; font-family: inherit; color: var(--summary-border); }
+  .summary ul { padding-left: 1.3em; margin: 0.4em 0; }
+  .summary li { margin-bottom: 0.4em; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  blockquote {
+    margin: 1em 0;
+    padding: 14px 18px;
+    background: var(--quote-bg);
+    border-left: 4px solid var(--quote-border);
+    border-radius: 3px;
+  }
+  blockquote p { margin: 0; }
+  blockquote .he {
+    direction: rtl;
+    text-align: right;
+    font-family: "Frank Ruehl CLM", "FrankRuehl", "David", "SBL Hebrew", "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  blockquote .en { margin-top: 8px; font-size: 0.95rem; color: var(--text); }
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 6px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .paren { color: inherit; }
+  .ed { color: var(--muted); }
+  .links a { margin-right: 0.2em; }
+  .notes {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .notes li { margin-bottom: 0.3em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<p class="source">Aaron Hyman, <em>Toldot Tannaim ve-Amoraim</em>, Letter Yod (vol. II, pp. 236–255)</p>
+<h1>R' Yoḥanan</h1>
+<p class="source links"><a href="https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D/%D7%99/%D7%A8%27_%D7%99%D7%95%D7%97%D7%A0%D7%9F">Hebrew original on Wikisource</a> · <a href="./">All entries</a> · <a href="https://github.com/EzraBrand/hyman-toldot-translation">GitHub repository</a></p>
+<p class="nav">← R' Yoḥanan (Tanna) &nbsp;|&nbsp; R' Yoḥanan, brother of Mar son of Ravina →</p>
+
+<section class="summary">
+  <h2>Summary</h2>
+  <p>Hyman's main entry on R' Yoḥanan (bar Nappaḥa), the leading Amora of Eretz Yisrael. The transcribed part covers his origins, his youth and his teachers.</p>
+  <ul>
+    <li><strong>Importance.</strong> He saw R' Yehuda HaNasi as a youth, founded the great academy in Tiberias, lived long enough to teach the fourth generation of Amoraim, and is traditionally credited with arranging the Jerusalem Talmud. After Rav and Shmuel died he was the head of the whole generation, also for Babylonia.</li>
+    <li><strong>Origins.</strong> Nothing is known of his family. The name "bar Nappaḥa" can mean his father's name, his father's trade (smith), or his beauty. His father died before his birth and his mother at his birth. A grandfather raised him.</li>
+    <li><strong>Dates.</strong> Hyman places his birth in Sepphoris in about 490 of the Seleucid era (≈ 179 CE). He was about 15 when R' Yehuda HaNasi died (505 SE, ≈ 194 CE).</li>
+    <li><strong>In R' Yehuda HaNasi's academy.</strong> He was the youngest student there ("seventeen rows behind Rabbi"). He received Rabbi's teaching mostly later, through Rabbi's disciples. Hyman defends Maimonides, who counts him among Rabbi's disciples, against the objection of Rabad.</li>
+    <li><strong>For Torah study</strong> he sold all the fields, olive groves and vineyards he had inherited.</li>
+    <li><strong>Teachers.</strong> Principal: R' Oshaya (he still consulted him after he founded his own academy), R' Yannai, Ḥizkiyah son of R' Ḥiyya, and R' Ḥanina bar Ḥama. Also: R' Bena'ah, R' Yehoshua ben Levi and many others.</li>
+    <li><strong>Hyman's new argument.</strong> In Yerushalmi Beitzah 1:1, R' Yoḥanan left Sepphoris for Tiberias because of "that old man" who forbade what he permitted. The commentators say this was R' Ḥanina bar Ḥama; Halevy says R' Ḥanina said it about R' Yoḥanan. Hyman rejects both: R' Yoḥanan would not speak so of his teacher, and at about 49 he was not yet "old." The old man was <strong>R' Ḥanina bar Sisi</strong>, a judge in Sepphoris. So the move shows humility, not arrogance (against Weiss).</li>
+  </ul>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Event (Hyman's reckoning)</th><th>Seleucid era</th><th>≈ CE</th></tr></thead>
+    <tbody>
+      <tr><td>Birth of R' Yoḥanan in Sepphoris</td><td>~490</td><td>~179</td></tr>
+      <tr><td>Death of R' Yehuda HaNasi (R' Yoḥanan about 15)</td><td>505</td><td>~194</td></tr>
+      <tr><td>R' Yoḥanan founds his academy in Tiberias (about age 49)</td><td>~539</td><td>~228</td></tr>
+      <tr><td>Death of R' Oshaya, 13 years later</td><td>552 (a little before 4000 AM)</td><td>~240</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<div class="warn">
+  <strong>Incomplete source.</strong> The entry fills pp. 236–255 of vol. II. Wikisource has transcribed only pp. 236–240. The text breaks off in the middle of the list of R' Yoḥanan's teachers. Pages 241–255 exist only as scans, so they are not translated here.
+</div>
+
+<h2>1. The man and his place in history</h2>
+
+<p>This is the R' Yoḥanan who in his youth still saw R' Yehuda HaNasi and all his Tannaitic colleagues. This is the R' Yoḥanan who received from all the great disciples of R' Yehuda HaNasi. This is the R' Yoḥanan who saw, after the death of R' Yehuda Nesiah, how the glory of the patriarchate declined from what it had been. This is the R' Yoḥanan who founded his great academy in Tiberias, which was almost the only academy in all Eretz Yisrael. This is the R' Yoḥanan who was granted long life, so that even the great men of the fourth generation of Amoraim still served in his great academy. And this is the R' Yoḥanan whose great academy studied the Jerusalem Talmud in the form we have today; it never received a general redaction like the Babylonian Talmud. That is why our early authorities had a reliable tradition that R' Yoḥanan arranged the Yerushalmi.</p>
+
+<p>As if sent from heaven, at the very time that R' Yehuda HaNasi gave Israel his ordered Mishnah, this genius was born, who passed on to us the explanation of the Mishnah. Just as R' Yehuda HaNasi was the head of his whole generation, so R' Yoḥanan in his time was the head of his whole generation. Nearly all the halakhot of the Amoraim in the Jerusalem Talmud are what they received from their great master. And not only the Yerushalmi: the Bavli also overflows with the teaching of our great master. After the deaths of Rav and Shmuel he was the head of the whole generation, and the sages of Babylonia held his words to be like the words of the Urim <span class="ed">[ve-Tummim]</span>.</p>
+
+<h2>2. Family and the name "bar Nappaḥa"</h2>
+
+<p>We do not know who the ancestors or the family of this outstanding man were. He is called "bar Nappaḥa," as in Bava Metzia 85b and in Sanhedrin 96a, where Resh Lakish calls him bar Nappaḥa. <span class="paren">(Rashi explains: "My teacher thinks that R' Yoḥanan's father was a smith <span class="ed">[<em>nappaḥa</em>]</span>, and therefore he is called bar Nappaḥa. Others explain 'bar Nappaḥa' as a reference to his beauty.")</span> Other places:</p>
+
+<blockquote>
+  <p class="he">"א״ר יונתן: ראה לשון שלימדנו בן הנפח."</p>
+  <p class="en">"R' Yonatan said: See the expression that the smith's son has taught us."</p>
+  <cite>Yerushalmi Rosh Hashanah 2:5</cite>
+</blockquote>
+
+<blockquote>
+  <p class="he">"א״ל: שמעית מילי דבר נפחא."</p>
+  <p class="en">"He said to him: You heard the words of bar Nappaḥa."</p>
+  <cite>Ketubot 25b — when Resh Lakish was angry with R' Elazar</cite>
+</blockquote>
+
+<blockquote>
+  <p class="he">"א״ר חנינא פתוראה: עילא מינאי הוה קאי בר נפחא."</p>
+  <p class="en">"R' Ḥanina of Petora said: Bar Nappaḥa used to stand above me."</p>
+  <cite>Ḥullin 54b</cite>
+</blockquote>
+
+<p>None of these passages makes clear whether his father's name was Nappaḥa, or his father was a smith, or he was called this because of his beauty.</p>
+
+<h2>3. Birth in Sepphoris</h2>
+
+<p>This much we do know: he was born in Sepphoris, at the time when R' Yehuda HaNasi lived there. As I said, R' Yoḥanan was young when Rabbi died, and I will explain this at length. It is known that Rabbi lived in Sepphoris for 17 years, so without doubt R' Yoḥanan was born in Sepphoris. This is what we find:</p>
+
+<blockquote>
+  <p class="he">"ההיא עוברא דארחה <span class="paren">(אשה מעוברת הריחה ריח מאכל ביום הכפורים)</span>, אתו לקמיה דרבי. א״ל: זילו לחושו לה דיומא דכיפורי הוא. לחושו לה, ואילחישא. קרי עליה: 'בטרם אצרך בבטן ידעתיך.' ונפיק מינה ר׳ יוחנן."</p>
+  <p class="en">"A certain pregnant woman smelled <span class="paren">(a pregnant woman smelled the smell of food on Yom Kippur)</span>; they came before Rabbi. He said to them: Go, whisper to her that it is Yom Kippur. They whispered to her, and she was calmed. He applied to her <span class="ed">[the verse]</span>: 'Before I formed you in the womb I knew you.' And R' Yoḥanan came forth from her."</p>
+  <cite>Yoma 82b</cite>
+</blockquote>
+
+<p>In the Yerushalmi there (8:4) the story is told about R' Tarfon; see there. According to Tosafot, Eruvin 91a, s.v. <em>Mi</em>, this is why they called him "R' Yoḥanan <em>melaḥashekh</em>" <span class="ed">[a play on the "whispering" in this story]</span>.</p>
+
+<h2>4. An orphan, raised by his grandfather</h2>
+
+<p>But R' Yoḥanan never saw his dear parents. As stated in Kiddushin 31b, his father died when his mother conceived him, and his mother died when she bore him. His only consolation was that he was exempt from a grave commandment, honoring father and mother, which no one can fulfil properly. He said: "Happy is the one who never saw them." He knew only the women who were present at his birth (Yerushalmi Ketubot 5:6).</p>
+
+<p>His father's father or his mother's father took him as a son, and he grew up in his home, as stated in the Yerushalmi:</p>
+
+<blockquote>
+  <p class="he">"אר״י: רכיב הוינא על כתפי דסבי, ושמעית קליה דר׳ שמעון בן אלעזר יתיב מתני."</p>
+  <p class="en">"R' Yoḥanan said: I was riding on the shoulders of my grandfather, and I heard the voice of R' Shimon ben Elazar sitting and teaching."</p>
+  <cite>Yerushalmi Ma'asrot 1:2</cite>
+</blockquote>
+
+<h2>5. The youngest student in R' Yehuda HaNasi's academy</h2>
+
+<p>It was the way of R' Yehuda HaNasi to look after orphans, as we find in Bava Metzia 85a with the son of R' Elazar son of R' Shimon, and with the son of R' Tarfon's daughter. So, it seems, Rabbi heard that the woman who smelled the food, about whom he had prophesied "Before I formed you in the womb I knew you," left a son who was an orphan of father and mother. When R' Yoḥanan grew up and Rabbi saw that he was blessed with talent, he gave him a place among his disciples in his great academy. Once he had the privilege of sitting before Rabbi:</p>
+
+<blockquote>
+  <p class="he">"הנהו תרי תלמידי דהוו יתבי קמי רבי, וחד מינייהו ר׳ יוחנן. חד אמר: מפני מה בוצרים בטהרה... אמר <span class="paren">(רבי)</span>: מובטח אני בזה שמורה הוראה בישראל."</p>
+  <p class="en">"Two disciples were sitting before Rabbi, and one of them was R' Yoḥanan. One said: Why do they harvest grapes in purity… <span class="paren">(Rabbi)</span> said: I am sure that this one will issue rulings in Israel."</p>
+  <cite>Pesaḥim 3b</cite>
+</blockquote>
+
+<p>But because he was still young, he was not yet counted among Rabbi's disciples, as R' Yoḥanan himself said:</p>
+
+<blockquote>
+  <p class="he">"דכירנא כד הוי יתיבנא אחר י״ז שורן אחורי דרבי, ונפקי זיקוקין דנורא מפומיה דרב לפומיה דרבי — ולית אנא ידע מה הן אמרין."</p>
+  <p class="en">"I remember when I sat seventeen rows behind Rabbi, and sparks of fire went out from the mouth of Rav to the mouth of Rabbi — and I did not know what they were saying."</p>
+  <cite>Ḥullin 137b</cite>
+</blockquote>
+
+<p>And there (54a) he said to Resh Lakish:</p>
+
+<blockquote>
+  <p class="he">"כל אותן שנים ששימש אותו תלמיד <span class="paren">(רב לרבי)</span> בישיבה, אני שמשתי בעמידה."</p>
+  <p class="en">"All those years that that disciple <span class="paren">(Rav, for Rabbi)</span> served sitting, I served standing."</p>
+  <cite>Ḥullin 54a</cite>
+</blockquote>
+
+<p class="paren">(Rashi: "He sat and I stood, because he was more important than I." One can also explain it by the rule that difficult material is learned sitting and easy material standing, as in Megillah 21a.)</p>
+
+<blockquote>
+  <p class="he">"ר׳ יוחנן ור״ל תרוייהון אמרין: אנן לא זכינן לאורייתא אלא בגין דחמינן אצבעתיה דרבי מן גולגיקין דידיה."</p>
+  <p class="en">"R' Yoḥanan and Resh Lakish both said: We merited Torah only because we saw Rabbi's finger coming out of his sleeve."</p>
+  <cite>Yerushalmi Beitzah 5:2</cite>
+</blockquote>
+
+<p>Without doubt this is a figure of speech, meaning that he served him only a little. That is why we do not find R' Yoḥanan stating a halakhah in the name of Rabbi, except in Menaḥot 88b, and in Sotah 30b according to the reading of the <em>Ein Ya'akov</em>. And in Yerushalmi Avodah Zarah ch. 4, R' Yoḥanan said: "Rabbi taught me well." The reason is that he had not yet reached the level at which he could receive the teaching of R' Yehuda HaNasi from his own mouth. He received it later through Rabbi's disciples R' Ḥanina, R' Oshaya and R' Yannai.</p>
+
+<p>How right our master Maimonides was in his introduction to the <em>Yad ha-Ḥazakah</em>. He counts R' Yoḥanan among Rabbi's disciples, and says explicitly that R' Yoḥanan was the youngest of his disciples and afterward was a disciple of R' Yannai. Maimonides did not mean that he was a <span class="ed">[full]</span> disciple of Rabbi, as Rabad understood him, and for that reason objected. He meant only that R' Yoḥanan was in Rabbi's academy. This is true, as explained above.</p>
+
+<h2>6. Date of birth</h2>
+
+<p>We have now shown that without doubt he was born in Sepphoris (because Rabbi spent the last 17 years of his life in Sepphoris), and that at the death of R' Yehuda HaNasi he was about 15 years old. We have already explained that Rabbi died in 505 of the Seleucid era <span class="ed">[≈ 194 CE]</span>. So R' Yoḥanan was born in about 490 SE <span class="ed">[≈ 179 CE]</span>.</p>
+
+<h2>7. Tiberias, and the estates he sold for Torah</h2>
+
+<p>It seems that his grandfather lived in the city of Tiberias, as R' Yoḥanan relates:</p>
+
+<blockquote>
+  <p class="he">"נהירנא כד הוו קיימין ד׳ סאין בסלע, והוו נפישי נפיחי כפן בטבריא מדלית איסר."</p>
+  <p class="en">"I remember when four se'ahs sold for a sela, and many were swollen with hunger in Tiberias because they did not have an issar."</p>
+  <cite>Bava Batra 91b</cite>
+</blockquote>
+
+<p>All his sayings there show that he is telling what happened in his childhood, as we find in Bava Batra 7b that Rabbi opened the storehouses in years of drought.</p>
+
+<p>His family left him many estates, fields and vineyards between Tiberias and Sepphoris, but he sold everything so that he could study Torah:</p>
+
+<blockquote>
+  <p class="he">"ר׳ יוחנן הוה מטייל וסליק מטבריא לציפורין, והוה רחב״א סמך ליה. מטון חד בית חקלא. אר״י: הדין בית חקלא הוה דידי, וזבינתיה בגין מלעי באורייתא. מטון חד בית זיתא, ואמר כמו כן; מטון חד בית כרם, <span class="ed">[ואמר כמו כן]</span>. והתחיל רחב״א לבכות. א״ל: בכי אנא דלא שבקית לסבותיך כלום. א״ל: חייא בני, ונקלה זו בעיניך מה שעשיתי, שמכרתי דבר שניתן לששה ימים — אבל התורה ניתנה לארבעים יום."</p>
+  <p class="en">"R' Yoḥanan was walking up from Tiberias to Sepphoris, and R' Ḥiyya bar Abba was supporting him. They came to a field. R' Yoḥanan said: This field was mine, and I sold it in order to toil in Torah. They came to an olive grove, and he said the same; they came to a vineyard, <span class="ed">[and he said the same]</span>. R' Ḥiyya bar Abba began to weep. He said to him: I weep because you have left nothing for your old age. He said to him: Ḥiyya my son, is what I did so slight in your eyes, that I sold a thing that was given in six days — but the Torah was given in forty days."</p>
+  <cite>Song of Songs Rabbah 8:7</cite>
+</blockquote>
+
+<p>His toil in Torah was so great that they said:</p>
+
+<blockquote>
+  <p class="he">"ר׳ יוחנן הוה יתיב קרי קומי כנישתא דבבל בציפורין. עבר ארכונא <span class="paren">(שר)</span> ולא קם מקמיה, ובעי <span class="paren">(עבדי השר)</span> להכותו. אמר להם: הרפו ממנו, בנימוסיא דבוראו הוא עסיק."</p>
+  <p class="en">"R' Yoḥanan was sitting and reading in front of the Babylonian synagogue in Sepphoris. An archon <span class="paren">(an official)</span> passed by, and he did not rise before him, and <span class="paren">(the official's servants)</span> wanted to strike him. He said to them: Leave him alone; he is occupied with the law of his Creator."</p>
+  <cite>Yerushalmi Berakhot 5:1</cite>
+</blockquote>
+
+<h2>8. His teachers</h2>
+
+<h3>8.1 Early contacts: R' Ḥiyya, Rav, and Shmuel's father</h3>
+
+<p>When he was in Rabbi's academy he got to know R' Ḥiyya, as in Ḥullin 54. In Yerushalmi Sanhedrin 1:1, R' Yoḥanan went to study before R' Ḥiyya the Great, who seated him next to a certain disciple. Beitzah 40a: "R' Yoḥanan said, R' Ḥiyya said."</p>
+
+<p>He also received from Rav, as in Berakhot 45b, where the Gemara says that they heard it from Rav before he went down to Babylonia. In Yerushalmi Sanhedrin 3:6, Rav went out to <span class="ed">[buy]</span> hides for R' Ḥiyya the Great in a certain place and found R' Yoḥanan sitting and raising questions, etc. Therefore, even when R' Yoḥanan was already the great man of the generation, he wrote to Rav: "To our master in Babylonia" (Ḥullin 95b).</p>
+
+<p>He also saw the father of Shmuel. In Yerushalmi Pesaḥim ch. 5 (end of halakhah 2), R' Yoḥanan said: "Abba bar Abba told me this."</p>
+
+<h3>8.2 R' Oshaya</h3>
+
+<p>But his principal teachers, from whom he received most of his Torah, are these. First, R' Oshaya, the great disciple of R' Ḥiyya:</p>
+
+<blockquote>
+  <p class="he">"אר״י: י״ח ימים גידלתי אצל ר׳ אושעיא בריבי... כשהיינו למדין תורה אצל ר׳ אושעיא, היינו יושבין ארבעה ארבעה באמה."</p>
+  <p class="en">"R' Yoḥanan said: I spent eighteen days with R' Oshaya Berabbi… When we studied Torah with R' Oshaya, we sat four to a cubit."</p>
+  <cite>Eruvin 53a</cite>
+</blockquote>
+
+<p>R' Yoḥanan said of him that he was like R' Meir in his generation: his colleagues could not fathom the depth of his mind, and his heart was as wide as the doorway of the Temple hall. In Ḥagigah 7a, R' Yoḥanan said: "Until R' Oshaya Berabbi came and taught." In Pesaḥim 81a he asked R' Oshaya. In Yevamot 57a he asked R' Oshaya, who was silent; afterward Resh Lakish came and asked him, and he answered him. R' Yehuda Nesiah said to R' Oshaya: "Is R' Yoḥanan not a great man?" This is also cited in Yerushalmi Yevamot ch. 8 (end of halakhah 2). From this we see that even when R' Yoḥanan and Resh Lakish were already the great men of the generation, he still studied with R' Oshaya. In Nazir 15b he raised a difficulty to R' Oshaya.</p>
+
+<p>Even after R' Yoḥanan founded his academy in Tiberias and was one of the great men of the generation, he still went to R' Oshaya to settle his doubts:</p>
+
+<blockquote>
+  <p class="he">"ר׳ יוחנן בשם ר׳ הושעיא: מוסיפין... תלת עשר שנין עביד עליל קומי רביה, דלא צריך ליה."</p>
+  <p class="en">"R' Yoḥanan in the name of R' Hoshaya: One adds… For thirteen years he used to go in before his teacher, though he did not need him."</p>
+  <cite>Yerushalmi Eruvin, beginning of ch. 5</cite>
+</blockquote>
+
+<blockquote>
+  <p class="he">"אמר ר׳ אימי בשם ר׳ יוחנן: על דבר זה הלכתי אצל ר׳ הושעיא רבה לקיסרין, וא״ל, וכו׳."</p>
+  <p class="en">"R' Immi said in the name of R' Yoḥanan: About this matter I went to R' Hoshaya Rabbah in Caesarea, and he told me, etc."</p>
+  <cite>Yerushalmi Ḥallah ch. 1 (end of halakhah 4)</cite>
+</blockquote>
+
+<p>In Yerushalmi Terumot ch. 10 (beginning of halakhah 2), R' Yoḥanan said: "When we used to go to R' Hoshaya Rabbah in Caesarea to study Torah." In Ta'anit 9a, Resh Lakish's young son said to R' Yoḥanan: "I did not need you, or R' Hoshaya your teacher." Their disputes: Ḥagigah 9a; Zevaḥim 113a.</p>
+
+<h3>8.3 R' Yannai</h3>
+
+<p>Next, his great teacher R' Yannai. Ḥullin 137b says explicitly that he was his teacher.</p>
+
+<blockquote>
+  <p class="he">"א״ל ר׳ יוחנן: רבי! לא משנתינו היא זו?"</p>
+  <p class="en">"R' Yoḥanan said to him: Master! Is this not our Mishnah?"</p>
+  <cite>Yevamot 92a</cite>
+</blockquote>
+
+<blockquote>
+  <p class="he">"אר״ז: אם יכפור ר׳ יוחנן בר״א תלמידו, יכפור בר׳ ינאי רבו?"</p>
+  <p class="en">"R' Zeira said: Even if R' Yoḥanan would deny R' Elazar his disciple, would he deny R' Yannai his teacher?"</p>
+  <cite>Bava Batra 154b</cite>
+</blockquote>
+
+<p>In Yerushalmi Ketubot ch. 9 (end of halakhah 2) and Kiddushin 1:4 it says explicitly that he was his disciple. In Kilayim 8:1, Sotah 2:5 and Yevamot 1:2, R' Yannai applied to R' Yoḥanan the verse "My son, let them not depart from your eyes."</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>R' Yoḥanan and R' Yannai</th><th>References</th></tr></thead>
+  <tbody>
+    <tr><td>Asked R' Yannai (בעי מ־)</td><td>Shabbat 140a (R' Yannai answered: "If so, what is the difference between me and you?"); Rosh Hashanah 15a; Bava Batra 11a; Avodah Zarah 52a</td></tr>
+    <tr><td>Asked R' Yannai (שאל)</td><td>Yerushalmi Berakhot ch. 3 (end of halakhah 1); Berakhot 30b: "I saw R' Yannai pray, etc."</td></tr>
+    <tr><td>"R' Yoḥanan said, R' Yannai said"</td><td>Shabbat 39b; Bava Batra 113a; Ḥullin 34b</td></tr>
+    <tr><td>"In the name of R' Yannai"</td><td>Kiddushin 67b; Bava Kamma 115a</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Bava Metzia 85b says that R' Yoḥanan sits (in the heavenly academy) beside R' Yannai. And in Avodah Zarah 36a, R' Zeira said: "I took great pains with R' Assi, and R' Assi with R' Yoḥanan, and R' Yoḥanan with R' Yannai."</p>
+
+<h3>8.4 Ḥizkiyah son of R' Ḥiyya</h3>
+
+<p>Ḥizkiyah, the son of R' Ḥiyya, was also his teacher, as in Shabbat 102b and Eruvin 24a:</p>
+
+<blockquote>
+  <p class="he">"א״ל ר׳ יוחנן לחזקיה: רבי! שנית לנו 'סנדל' — ואמרינן לך: מ״ש? — ואמרת לן עליה..."</p>
+  <p class="en">"R' Yoḥanan said to Ḥizkiyah: Master! You taught us 'sandal' — and we asked you: What is the difference? — and you told us about it…"</p>
+  <cite>Shabbat 102b; Eruvin 24a</cite>
+</blockquote>
+
+<p>Ḥizkiyah said of him: "This is no <span class="ed">[ordinary]</span> human being," or <span class="ed">[in another version]</span>: "This is what a human being should be." Tosafot (Gittin 84b, Bava Kamma 117b, Menaḥot 23b) hold that as long as his teacher Ḥizkiyah was alive, R' Yoḥanan was not head of an academy.</p>
+
+<p><strong>Their disputes:</strong> Eruvin 3a; Mo'ed Katan 10a, 13b; Ḥagigah 8a, 9a; Gittin 53a, 84b; Sanhedrin 86a; Avodah Zarah 38b; Zevaḥim 56a; Menaḥot 104b; Ḥullin 130a; Niddah 4a.</p>
+
+<h3>8.5 R' Ḥanina bar Ḥama</h3>
+
+<p>He also received from R' Ḥanina bar Ḥama. In Yerushalmi Horayot 3:4 it is told that R' Yoḥanan once expounded in the study house of R' Bena'i in Sepphoris. R' Ḥanina, leaning on R' Ḥiyya bar Abba, saw that everyone was running to hear R' Yoḥanan's discourses:</p>
+
+<blockquote>
+  <p class="he">"א״ר חנינא: בריך רחמנא דחמא לי פירין עד דאנא בחיים. וכל אגדה פשטית ליה, חוץ ממשלי וקהלת."</p>
+  <p class="en">"R' Ḥanina said: Blessed is the Merciful One, who has shown me fruit while I am still alive. And I explained all the aggadah to him, except Proverbs and Ecclesiastes."</p>
+  <cite>Yerushalmi Horayot 3:4</cite>
+</blockquote>
+
+<p>In Yerushalmi Bava Metzia, end of ch. 2, they are unsure whether R' Ḥanina was his principal teacher or not. In Rosh Hashanah 2:5, R' Ḥanina opened (the discourse), and R' Yoḥanan and Resh Lakish concluded it. In Niddah 26b R' Yoḥanan said: "The wisdom of R' Ḥanina caused it for me…" <span class="paren">(on his practice of not examining blood stains)</span>. In Shabbat 47a: "R' Yoḥanan said, R' Ḥanina said." Both said it together: Ketubot 48a. He raised a difficulty to R' Ḥanina: Gittin 51a.</p>
+
+<p><strong>Their disputes:</strong> Shabbat 156a; Yoma 4b; Gittin 3a; Sotah 6a; Menaḥot 26b, 94b.</p>
+
+<p>Berakhot 5b tells that once R' Yoḥanan fell ill, and R' Ḥanina went in to visit him:</p>
+
+<blockquote>
+  <p class="he">"א״ל: חביבין עליך יסורין? א״ל: לא הן ולא שכרן. יהיב ליה ידיה, ואוקמיה."</p>
+  <p class="en">"He said to him: Is your suffering dear to you? He said: Neither it nor its reward. He gave him his hand and raised him up."</p>
+  <cite>Berakhot 5b</cite>
+</blockquote>
+
+<h3>8.6 Why R' Yoḥanan left Sepphoris for Tiberias</h3>
+
+<p>Yerushalmi Beitzah 1:1 tells that R' Yoḥanan went down from Sepphoris to Tiberias because of two things. R' Ḥanina <span class="paren">(in Shevi'it, beginning of ch. 9, the reading is "R' Ḥunya of Ḥavrin")</span> ruled for the people of Sepphoris on the aftergrowth of mustard and on the egg according to R' Yehudah. They asked R' Yoḥanan, and he expounded for them according to the Sages:</p>
+
+<blockquote>
+  <p class="he">"אמר: מה אתיתון לי ההן סבא, דאנא שרי והוא אסר?"</p>
+  <p class="en">"He said: Why have you brought me that old man, so that I permit and he forbids?"</p>
+  <cite>Yerushalmi Beitzah 1:1</cite>
+</blockquote>
+
+<p>The commentators there explain that R' Yoḥanan said this about R' Ḥanina. The wording does seem to fit their explanation. But how is it possible that R' Yoḥanan would say such things about his teacher, especially since R' Ḥanina was then very old? <em>Dorot ha-Rishonim</em>, part 3, ch. 16, says that R' Ḥanina said this about R' Yoḥanan. This too is impossible, because R' Yoḥanan was not yet an old man then: the event took place before he founded his academy in Tiberias. We explained above that R' Yoḥanan was born in about 490 SE <span class="ed">[≈ 179 CE]</span>. His teacher R' Oshaya died a little before the year 4000 <span class="ed">[AM]</span>, which is 552 SE <span class="ed">[≈ 240 CE]</span>, and R' Yoḥanan founded his academy 13 years before the death of his teacher <span class="ed">[the printed text reads "Rabbi"]</span>, as cited above. So R' Yoḥanan was then only about 49 years old. How then could R' Ḥanina call him "that old man"?</p>
+
+<p>But I have already explained in the entry on R' Ḥanina that this is <strong>R' Ḥanina bar Sisi</strong>, who was then a judge in Sepphoris. It is about him that R' Yoḥanan said "Why have you brought me that old man," and because of him R' Yoḥanan went to Tiberias and founded his great academy there. The learned Dr. W. Bacher also erred on this point (Amoraim part, p. 6). And I. H. Weiss (vol. 3, p. 67) found in this story an opening to attack R' Yoḥanan for arrogance, and made a great mistake. On the contrary: here we see his great humility. He left R' Ḥanina (bar Sisi) in his place and went somewhere else.</p>
+
+<h3>8.7 The death of R' Ḥanina</h3>
+
+<blockquote>
+  <p class="he">"א״ל לר״י: נח נפשיה דר׳ חנינא. קרע עליה י״ג אצטלי דמילתא, ואמר: אזל גברא דהוה מסתפינא מיניה."</p>
+  <p class="en">"They said to R' Yoḥanan: R' Ḥanina has died. He tore over him thirteen robes of fine wool, and said: The man whom I feared is gone."</p>
+  <cite>Mo'ed Katan 24a</cite>
+</blockquote>
+
+<p>In the Yerushalmi there (3:8): R' Yoḥanan heard that R' Ḥanina was ill and went up to visit him. On the way he heard that he had died, and he tore his good garments over him.</p>
+
+<h3>8.8 R' Bena'ah, R' Yehoshua ben Levi, and others</h3>
+
+<p>He also received from R' Bena'ah. He asked him a question in Bava Batra 57b. He said things in his name in Yevamot 71b, Gittin 60a, Bava Batra 57b, Avodah Zarah 5b, and in the Yerushalmi: Pe'ah 1 (beginning, halakhah 2), Shabbat 10:6, and Pesaḥim, beginning of ch. 10.</p>
+
+<p>He also received from R' Yehoshua ben Levi:</p>
+
+<blockquote>
+  <p class="he">"א״ל ר״י: לא כן אלפן רבי?"</p>
+  <p class="en">"R' Yoḥanan said to him: Is this not what my master taught us?"</p>
+  <cite>Yerushalmi Bikkurim 2:2</cite>
+</blockquote>
+
+<p>In Yerushalmi Avodah Zarah 2:7–8, R' Yoḥanan said about R' Yehoshua ben Levi (not in his presence): "My master taught me well." "R' Yoḥanan said, R' Yehoshua ben Levi said": Sukkah 32a.</p>
+
+<p><strong>Their disputes:</strong> Sukkah 44a; Yoma 60b; Megillah 27a; Yevamot 39a, 65b; Gittin 5b; Bava Batra 96a, 116a; Menaḥot 26b, 95a.</p>
+
+<p>Further sages from whom R' Yoḥanan received or in whose name he spoke:</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Sage</th><th>Relation</th><th>References</th></tr></thead>
+  <tbody>
+    <tr><td>R' Elazar of Rome</td><td>in his name</td><td>Gittin 66a</td></tr>
+    <tr><td>R' Yehudah bar Livai</td><td>R' Yoḥanan asked him</td><td>Shabbat 113a</td></tr>
+    <tr><td>R' Yehoshua ben Uza'a</td><td>"R' Yehoshua ben Uza'a asked"</td><td>Yoma 47b</td></tr>
+    <tr><td>R' Yehudah son of R' Shimon</td><td>raised an objection to him; sent him questions on lungs with blisters; in his name (Rashbam: "in the name of," because he was not his principal teacher)</td><td>Bava Batra 115a; Ḥullin 48a; Bava Batra 114b</td></tr>
+    <tr><td>Rabban Gamliel son of Rabbi</td><td>R' Yoḥanan asked him</td><td>Ḥullin 106a</td></tr>
+    <tr><td>(text unclear: הני בדדלא)</td><td>"R' Yoḥanan said…"</td><td>Makkot 14b; Kilayim 1:6</td></tr>
+    <tr><td>Zavdi ben Levi</td><td>"Zavdi ben Levi taught"</td><td>Zevaḥim 25b</td></tr>
+    <tr><td>The sons of R' Ḥalafta of Huna (or Ḥeifa)</td><td>he told them: "Thus said your father"</td><td>Gittin 86b</td></tr>
+    <tr><td>R' Yose ben Zimra</td><td>in his name</td><td>Berakhot 7a (reading of the Baḥ), 10b; Shabbat 105a; Eruvin 87b; Ketubot 96a; Sanhedrin 89b; Arakhin 15b. Shabbat 118a has "R' Yose"; the Rif reads "R' Yose ben Zimra."</td></tr>
+    <tr><td>Abba Yose ben Abbai (or Abba)</td><td>in his name</td><td>Zevaḥim 25b, 97a; Yerushalmi Ta'anit 4:5 has "R' Yose bar Abbaye," read "Abba Yose"</td></tr>
+    <tr><td>R' Yose ben Yehoshua</td><td>in his name</td><td>Ḥullin 56b; Niddah 24a; Yerushalmi Niddah ch. 3 (end of halakhah 2)</td></tr>
+    <tr><td>R' Yose ben Katzarta</td><td>in his name</td><td>Shabbat 151b; Sanhedrin 103b (reading of the She'iltot)</td></tr>
+    <tr><td>R' Yose ben Nehorai</td><td>in his name</td><td>Bava Metzia 41a</td></tr>
+    <tr><td>Rav Yosef of Hutzal</td><td>"Rav Yosef of Hutzal asked"</td><td>Yoma 52a</td></tr>
+    <tr><td>R' Menaḥem of Galya</td><td>in his name (see his entry)</td><td>Yerushalmi Berakhot 4:4</td></tr>
+    <tr><td>R' Menaḥem of Yodfat</td><td>in his name</td><td>Zevaḥim 110b</td></tr>
+    <tr><td>R' Neḥunya of the valley of Beit Ḥurtan</td><td>in his name …</td><td><em><span class="ed">[the transcription breaks off here, end of p. 240]</span></em></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="notes">
+  <p><strong>Translation notes.</strong></p>
+  <ul>
+    <li>Abbreviations are written out in full in the English. "Our holy Rabbi" (רבינו הקדוש) is given as R' Yehuda HaNasi; inside quotations "Rabbi" is kept as it is.</li>
+    <li>Words in [square brackets] (gray) are the translator's additions. Text in parentheses is Hyman's own. The section headings, the summary, the timeline and the tables are the translator's, not Hyman's.</li>
+    <li>The Hebrew in each quote block is from the Wikisource text. The translator added the punctuation to match the English and wrote the abbreviation marks as ״ and ׳. The Wikisource text is OCR and has many letter errors; obvious ones are corrected silently in the quotes (for example ד׳ יוחנן → ר׳ יוחנן, ארכוגא → ארכונא, בנין → בגין).</li>
+    <li>Talmud references are given as Hyman wrote them, also where they look wrong (for example Shabbat 102b, Niddah 26b). Seleucid-era years are converted to CE by the translator (about −311).</li>
+    <li>Uncertain points: "R' Yoḥanan <em>melaḥashekh</em>" (Tosafot, Eruvin 91a); "a <span class="ed">[full]</span> disciple" for מב״ר in the Rabad passage; the work of I. H. Weiss is abbreviated ח״נ in the text; the entry "הני בדדלא" is unclear in the OCR.</li>
+    <li>Wikisource has text only for pp. 236–240 of the entry (pp. 236–255).</li>
+  </ul>
+  <p>Source: <a href="https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D/%D7%99/%D7%A8%27_%D7%99%D7%95%D7%97%D7%A0%D7%9F">he.wikisource.org — תולדות תנאים ואמוראים / י / ר׳ יוחנן</a></p>
+  <p>Part of a sample translation project: <a href="https://github.com/EzraBrand/hyman-toldot-translation">https://github.com/EzraBrand/hyman-toldot-translation</a> (MIT license).</p>
+</div>
+
+</main>
+</body>
+</html>

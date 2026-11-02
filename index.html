@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyman, Toldot Tannaim ve-Amoraim</title>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --text: #222;
+    --muted: #666;
+    --accent: #7a4b1e;
+    --summary-bg: #eef3f7;
+    --summary-border: #4a7396;
+    --rule: #ddd5c8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1b19;
+      --text: #e6e2da;
+      --muted: #a39d92;
+      --accent: #e0b07a;
+      --summary-bg: #1f2a33;
+      --summary-border: #6e98bb;
+      --rule: #3a3631;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 18px/1.65 Georgia, "Times New Roman", serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; color: var(--accent); }
+  .he-title { direction: rtl; font-family: "Frank Ruehl CLM", "FrankRuehl", "David", serif; font-size: 1.3rem; color: var(--muted); margin: 0 0 24px; }
+  h2 { font-size: 1.25rem; margin: 2em 0 0.6em; color: var(--accent); }
+  .box {
+    background: var(--summary-bg);
+    border-left: 4px solid var(--summary-border);
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.5em; }
+  .entries li { font-size: 1.1rem; }
+  .entries .desc { display: block; font-size: 0.9rem; color: var(--muted); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  footer {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Hyman, <em>Toldot Tannaim ve-Amoraim</em></h1>
+<p class="he-title">אהרן הימן, תולדות תנאים ואמוראים (לונדון, תר״ע / 1910)</p>
+
+<div class="box">
+  <strong>A sample / test.</strong> This is a small test of a translation pipeline for Aaron Hyman's biographical dictionary of the Tannaim and Amoraim. The pipeline: take the Hebrew text from Wikisource, translate it into English with the abbreviations written out, add a summary at the top, and set each quoted source as a quote block with the Hebrew first. Two entries are done: one short and one long. The translations were made with Claude (an AI model) and have not been checked by a specialist.
+</div>
+
+<h2>Entries</h2>
+<ul class="entries">
+  <li><a href="r-abba-stam.html">R' Abba (unqualified)</a> <span class="desc">Letter Alef. Hyman argues that there were only three sages called simply "R' Abba," not seven, and corrects a dozen scribal errors.</span></li>
+  <li><a href="r-yohanan.html">R' Yoḥanan</a> <span class="desc">Letter Yod. Origins, youth and teachers of R' Yoḥanan bar Nappaḥa. Only pp. 236–240 of the entry (pp. 236–255) are transcribed on Wikisource.</span></li>
+</ul>
+
+<h2>Conventions</h2>
+<ul>
+  <li>Text in (parentheses) is Hyman's own. Text in [square brackets], shown in gray, is the translator's addition.</li>
+  <li>"Our holy Rabbi" (רבינו הקדוש) is given as R' Yehuda HaNasi; "Land of Israel" as Eretz Yisrael.</li>
+  <li>Summaries, section headings and tables are the translator's, not Hyman's.</li>
+</ul>
+
+<h2>Related projects</h2>
+<p>Other recent tests of the same kind: OCR and/or translation of classic reference works on Talmudic realia and names.</p>
+<ul>
+  <li><a href="https://ezrabrand.github.io/lewysohn-zoologie/">Lewysohn, <em>Die Zoologie des Talmuds</em> (1858)</a> — OCR and English translation (<a href="https://github.com/EzraBrand/lewysohn-zoologie">repo</a>)</li>
+  <li><a href="https://ezrabrand.github.io/talmud-zoology-factcheck/">Talmud zoology fact-check</a> — zoological claims of the Bavli (via Lewysohn) checked against modern zoology (<a href="https://github.com/EzraBrand/talmud-zoology-factcheck">repo</a>)</li>
+  <li><a href="https://ezrabrand.github.io/low-flora/">Löw, <em>Die Flora der Juden</em> (1924–34)</a> — test pipeline for multi-script OCR and translation (<a href="https://github.com/EzraBrand/low-flora">repo</a>)</li>
+  <li><a href="https://ezrabrand.github.io/bochart-hierozoicon/">Bochart, <em>Hierozoicon</em></a> — OCR and translation pilot on the shafan (<a href="https://github.com/EzraBrand/bochart-hierozoicon">repo</a>)</li>
+  <li><a href="https://ezrabrand.github.io/abba-to-zebedee/">From Abba to Zebedee</a> — naming conventions in the Mishnah, Talmud and Midrash (<a href="https://github.com/EzraBrand/abba-to-zebedee">repo</a>)</li>
+</ul>
+
+<footer>
+  <p>Source text: <a href="https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D">תולדות תנאים ואמוראים on Hebrew Wikisource</a> (the 1910 work is in the public domain). Translations and code: MIT license. <a href="https://github.com/EzraBrand/hyman-toldot-translation">GitHub repository</a>.</p>
+</footer>
+
+</main>
+</body>
+</html>
