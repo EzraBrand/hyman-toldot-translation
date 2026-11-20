@@ -172,6 +172,32 @@ h.style.display=[...ul.children].some(li=>li.style.display!=='none')?'':'none'})
                                         "All entries of Hyman's Toldot Tannaim ve-Amoraim in English machine translation."),
                                    encoding="utf-8")
     print(f"{len(built)} entry pages + index in {MT}")
+    write_status(rows, built_ids)
+
+
+def write_status(rows: list[dict], built_ids: set) -> None:
+    """Refresh the status table between the markers in SITE/README.md."""
+    import datetime
+    readme = SITE / "README.md"
+    if not readme.exists():
+        return
+    listed = ROOT / "data" / "wikisource" / "list.json"
+    n_pages = len(json.loads(listed.read_text(encoding="utf-8"))) if listed.exists() else 0
+    n_saved = len(list((ROOT / "data" / "wikisource" / "pages").glob("*.json")))
+    cost = sum(json.loads(f.read_text(encoding="utf-8")).get("cost", 0) for f in (ROOT / "data" / "en").glob("*.json"))
+    lines = [f"As of {datetime.datetime.now().strftime('%d-%b-%Y %H:%M')} (Israel time).", "",
+             f"- Wikisource pages fetched: {n_saved:,} of {n_pages:,} (entry pages plus 22 letter index pages).",
+             f"- Entries with an English page: **{len(built_ids):,}**. Translation cost so far: ${cost:.2f}.", "",
+             "| Letter | Entries fetched | With text | Translated | Hebrew characters |", "|---|---|---|---|---|"]
+    for letter, name in LETTER_NAMES.items():
+        rs = [r for r in rows if r["letter"] == letter]
+        if rs:
+            lines.append(f"| {name} ({letter}) | {len(rs)} | {sum(1 for r in rs if r['chars'] >= MIN_CHARS)} | "
+                         f"{sum(1 for r in rs if r['pageid'] in built_ids)} | {sum(r['chars'] for r in rs):,} |")
+    t = readme.read_text(encoding="utf-8")
+    t = re.sub(r"(<!-- status:start -->\n).*?(\n<!-- status:end -->)", lambda m: m.group(1) + "\n".join(lines) + m.group(2),
+               t, flags=re.S)
+    readme.write_text(t, encoding="utf-8")
 
 
 if __name__ == "__main__":

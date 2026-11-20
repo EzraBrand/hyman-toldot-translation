@@ -1,23 +1,65 @@
-# Hyman, *Toldot Tannaim ve-Amoraim*: sample English translation
+# Hyman, *Toldot Tannaim ve-Amoraim*: English translation
 
-**A sample / test.** English translation of two entries from Aaron Hyman, *Toldot Tannaim ve-Amoraim* (London, 1910), a biographical dictionary of the Tannaim and Amoraim. The Hebrew text is from [Hebrew Wikisource](https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D).
+English translation of Aaron Hyman, *Toldot Tannaim ve-Amoraim* (London, 1910), a biographical dictionary of the
+Tannaim and Amoraim. The Hebrew text is from
+[Hebrew Wikisource](https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D).
 
 Site: https://ezrabrand.github.io/hyman-toldot-translation/
+
+The project has two parts:
+
+1. **Machine translation of all entries** ([`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/)), from
+   20-Nov-2026, work in progress. Every entry that is transcribed on Wikisource, translated paragraph by paragraph with
+   Gemini 4 Argon and shown next to the Hebrew. **Not reviewed.**
+2. **Reviewed sample entries** (02-Nov-2026): two entries translated with Claude and checked, with a summary at the top
+   and each quoted source as a quote block.
+
+## Status
+
+<!-- status:start -->
+As of 20-Nov-2026 14:20 (Israel time).
+
+- Wikisource pages fetched: 685 of 2,242 (entry pages plus 22 letter index pages).
+- Entries with an English page: **242**. Translation cost so far: $1.54.
+
+| Letter | Entries fetched | With text | Translated | Hebrew characters |
+|---|---|---|---|---|
+| Alef (א) | 544 | 461 | 242 | 475,638 |
+<!-- status:end -->
+
+## Machine translation: how it is made
+
+Code in [`pipeline/`](pipeline/):
+
+| Step | Script | What it does |
+|---|---|---|
+| 1 | `fetch_wikisource.py` | Downloads every entry page under the book's Wikisource prefix through the MediaWiki API. The entry pages only transclude the scan pages, so it asks the API to render them: 20 entries per `action=parse` call, 3 s apart (the anonymous API returns HTTP 429 at about 5 calls a second). Resumable. |
+| 2 | `extract.py` | Turns the rendered HTML into clean Hebrew paragraphs (abbreviation tooltips and page markers removed) and puts the entries in book order, from the letter index pages. |
+| 3 | `translate.py` | Sends each entry to Gemini 4 Argon (effort low, via OpenRouter) as a numbered JSON list of paragraphs, in chunks of up to 6,000 characters, and checks that one English paragraph comes back for each Hebrew one. Resumable. |
+| 4 | `build_site.py` | Writes `mt/index.html` (all entries by letter, with a filter) and one page per entry: English and Hebrew side by side, with links to Wikisource, the scan page, and the previous and next entries. |
+
+The translation prompt asks for every abbreviation to be written out, standard English references (Berakhot 49a,
+Yerushalmi Shabbat 1:2), Hyman's own (parentheses) kept, and the translator's additions in [square brackets], shown in
+gray on the site.
+
+**Why Gemini 4 Argon.** On 20-Nov-2026 seven models translated two entries (R' Abba (stam) and R' Abba bar Zavda), and
+the results were checked by hand on ten hard points. Argon made the fewest errors (1 of 10) and was the only model that
+noticed one of Hyman's own wrong references; it costs about a third of Claude Opus 5.5. Gemini 3.8 Flash is cheaper
+with more slips in the Aramaic; Claude Sonnet 5.5 and Opus 5.5 made errors in dates (era of the year) and references.
+Details: [`pipeline/README.md`](pipeline/README.md).
+
+**Known limits.** The English is not reviewed. Expect wrong expansions of ambiguous abbreviations, wrong forms of rare
+names, and errors that Hyman's own text carries. Short "see entry X" cross-references have no page; entries that
+Wikisource has not transcribed yet (scan only) are listed in gray.
+
+## Reviewed sample entries
 
 | Entry | Page | Note |
 |---|---|---|
 | R' Abba (stam) | [r-abba-stam.html](https://ezrabrand.github.io/hyman-toldot-translation/r-abba-stam.html) | Short entry; complete |
 | R' Yoḥanan | [r-yohanan.html](https://ezrabrand.github.io/hyman-toldot-translation/r-yohanan.html) | Long entry; only pp. 236–240 of pp. 236–255 are transcribed on Wikisource |
 
-## Machine translation of all entries (from 20-Nov-2026)
-
-[`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/): every entry transcribed on Wikisource, translated
-paragraph by paragraph with Gemini 4 Argon (via OpenRouter) and shown next to the Hebrew. Not reviewed. Code in
-[`pipeline/`](pipeline/): `fetch_wikisource.py` (API, 20 entries per parse call), `extract.py` (clean paragraphs, book
-order), `translate.py` (Argon, resumable), `build_site.py` (pages). The model test of 20-Nov-2026 (7 models, 2 entries)
-is in [`pipeline/README.md`](pipeline/README.md).
-
-## Pipeline of the reviewed entries
+How they were made:
 
 1. Take the Hebrew entry from Wikisource.
 2. Translate it into English, with abbreviations written out.

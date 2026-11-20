@@ -1,5 +1,10 @@
 # Hyman, Toldot Tannaim ve-Amoraim: model test for translation (20-Nov-2026)
 
+This file records the model test that chose Gemini 4 Argon. The full pipeline that uses it (`fetch_wikisource.py`,
+`extract.py`, `translate.py`, `build_site.py`) and the current status are described in the main README of
+[hyman-toldot-translation](https://github.com/EzraBrand/hyman-toldot-translation#readme). Paths below such as
+`source/` and `out/` are in the local working folder, not in the repository.
+
 Source: Hebrew Wikisource, two entries of letter Alef (text taken through the parse API, abbreviation tooltips removed,
 SHA-256 checked against the browser copy):
 
