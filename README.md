@@ -17,14 +17,14 @@ The project has two parts:
 ## Status
 
 <!-- status:start -->
-As of 20-Nov-2026 14:22 (Israel time).
+As of 20-Nov-2026 14:26 (Israel time).
 
-- Wikisource pages fetched: 785 of 2,242 (entry pages plus 22 letter index pages).
-- Entries with an English page: **315**. Translation cost so far: $2.22.
+- Wikisource pages fetched: 985 of 2,242 (entry pages plus 22 letter index pages).
+- Entries with an English page: **428**. Translation cost so far: $3.55.
 
 | Letter | Entries fetched | With text | Translated | Hebrew characters |
 |---|---|---|---|---|
-| Alef (א) | 544 | 461 | 315 | 475,638 |
+| Alef (א) | 544 | 461 | 428 | 475,638 |
 <!-- status:end -->
 
 ## Machine translation: how it is made

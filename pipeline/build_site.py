@@ -129,10 +129,12 @@ def main():
                 f'kept; [gray brackets] are the translator\'s additions. Check every reading against the Hebrew.</div>']
         for j, he in enumerate(r["paras"]):
             head = he.startswith("## ")
+            if head and j == 0:
+                continue  # the entry heading is already the page title
             he_t = he[3:] if head else he
             e = en[j]
             e_html = en_html(re.sub(r"^#+\s*", "", e)) if e else '<span class="missing">(not translated)</span>'
-            body.append(f'<div class="row{" head" if head else ""}"><div class="en"><p>{e_html}</p></div>'
+            body.append(f'<div class="row{" head" if head else ""}" id="p{j}"><div class="en"><p>{e_html}</p></div>'
                         f'<div class="he" lang="he"><p>{esc(he_t)}</p></div></div>')
         body.append(f'<p class="nav" style="margin-top:20px">{" · ".join(pn)}</p>')
         (MT / f'{r["pageid"]}.html').write_text(page(f'{titles[r["pageid"]]} — Hyman, Toldot Tannaim ve-Amoraim',
