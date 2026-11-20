@@ -13,6 +13,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 from translate import MIN_CHARS, MODEL, english  # noqa: E402
+from numcheck import is_raw_ocr  # noqa: E402
 
 SITE = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT.parent / "hyman-toldot"
 MT = SITE / "mt"
@@ -37,6 +38,7 @@ h1{font-size:1.9rem;margin:0 0 2px;color:var(--accent)}
 .en p,.he p{margin:0}
 .row.head .en{font-weight:bold;color:var(--accent)} .row.head .he{font-weight:bold}
 .tr{color:var(--gray)}
+.ocrnote{display:block;font-family:system-ui,-apple-system,\"Segoe UI\",sans-serif;font-size:.8rem;color:#a33;margin-bottom:4px}
 .missing{color:var(--muted);font-style:italic}
 @media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}}
 footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -134,6 +136,9 @@ def main():
             he_t = he[3:] if head else he
             e = en[j]
             e_html = en_html(re.sub(r"^#+\s*", "", e)) if e else '<span class="missing">(not translated)</span>'
+            if is_raw_ocr(he):
+                e_html = ('<span class="ocrnote">The Hebrew of this paragraph on Wikisource is uncorrected OCR (columns '
+                          'mixed, letters confused). The translation is not reliable; read the scan.</span> ' + e_html)
             body.append(f'<div class="row{" head" if head else ""}" id="p{j}"><div class="en"><p>{e_html}</p></div>'
                         f'<div class="he" lang="he"><p>{esc(he_t)}</p></div></div>')
         body.append(f'<p class="nav" style="margin-top:20px">{" · ".join(pn)}</p>')

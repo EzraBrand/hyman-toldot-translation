@@ -47,6 +47,9 @@ Rules:
   and "Rabbi" for the Patriarch = R' Yehuda HaNasi. Use "Eretz Yisrael", not "Land of Israel"; "Babylonia".
 - Quoted Talmudic Hebrew/Aramaic: translate it, inside quotation marks.
 - Hyman's own parentheses stay as (parentheses). Words you add for sense go in [square brackets].
+- Numbers, dates, page and chapter references: give exactly what Hyman wrote, only converted to digits. Never correct
+  them in the text, even when you think Hyman or the printer is wrong; then add your suggestion in brackets after
+  it, e.g. "Bava Batra 168a [perhaps 165a]".
 - Where a reading is truly unclear, translate the likely sense and add [?].
 
 Paragraphs (JSON list of [number, Hebrew]):

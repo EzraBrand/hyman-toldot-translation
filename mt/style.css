@@ -13,6 +13,7 @@ h1{font-size:1.9rem;margin:0 0 2px;color:var(--accent)}
 .en p,.he p{margin:0}
 .row.head .en{font-weight:bold;color:var(--accent)} .row.head .he{font-weight:bold}
 .tr{color:var(--gray)}
+.ocrnote{display:block;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.8rem;color:#a33;margin-bottom:4px}
 .missing{color:var(--muted);font-style:italic}
 @media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}}
 footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}

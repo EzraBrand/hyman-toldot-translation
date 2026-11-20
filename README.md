@@ -17,10 +17,10 @@ The project has two parts:
 ## Status
 
 <!-- status:start -->
-As of 20-Nov-2026 15:08 (Israel time).
+As of 20-Nov-2026 15:16 (Israel time).
 
 - Wikisource pages fetched: 2,242 of 2,242 (entry pages plus 22 letter index pages).
-- Entries with an English page: **1,889**. Translation cost so far: $13.08.
+- Entries with an English page: **1,889**. Translation cost so far: $13.55.
 
 | Letter | Entries fetched | With text | Translated | Hebrew characters |
 |---|---|---|---|---|
@@ -54,7 +54,8 @@ Code in [`pipeline/`](pipeline/):
 | 1 | `fetch_wikisource.py` | Downloads every entry page under the book's Wikisource prefix through the MediaWiki API. The entry pages only transclude the scan pages, so it asks the API to render them: 20 entries per `action=parse` call, 3 s apart (the anonymous API returns HTTP 429 at about 5 calls a second). Resumable. |
 | 2 | `extract.py` | Turns the rendered HTML into clean Hebrew paragraphs (abbreviation tooltips and page markers removed) and puts the entries in book order, from the letter index pages. |
 | 3 | `translate.py` | Sends each entry to Gemini 4 Argon (effort low, via OpenRouter) as a numbered JSON list of paragraphs, in chunks of up to 6,000 characters, and checks that one English paragraph comes back for each Hebrew one. Resumable. |
-| 4 | `build_site.py` | Writes `mt/index.html` (all entries by letter, with a filter) and one page per entry: English and Hebrew side by side, with links to Wikisource, the scan page, and the previous and next entries. |
+| 4 | `numcheck.py`, `fixflags.py` | Free check: every number in the English (pages, chapters, years, ages) must come from a number in the Hebrew paragraph (Hebrew letter numerals are decoded). On 20-Nov-2026 it flagged 128 numbers in 125 paragraphs; those paragraphs were translated again with a stricter rule (Hyman's numbers exactly, any correction only in brackets), $0.49, leaving 47 flags, mostly numbers the check cannot decode. The rest are listed in [`pipeline/numcheck_remaining.tsv`](pipeline/numcheck_remaining.tsv) for review. Paragraphs whose Hebrew on Wikisource is raw, uncorrected OCR (92 paragraphs, mainly in the entries on Resh Lakish and Rav Sheshet) are skipped and marked on the site. |
+| 5 | `build_site.py` | Writes `mt/index.html` (all entries by letter, with a filter) and one page per entry: English and Hebrew side by side, with links to Wikisource, the scan page, and the previous and next entries. |
 
 The translation prompt asks for every abbreviation to be written out, standard English references (Berakhot 49a,
 Yerushalmi Shabbat 1:2), Hyman's own (parentheses) kept, and the translator's additions in [square brackets], shown in
@@ -67,7 +68,7 @@ with more slips in the Aramaic; Claude Sonnet 5.5 and Opus 5.5 made errors in da
 Details: [`pipeline/README.md`](pipeline/README.md).
 
 **Known limits.** The English is not reviewed. Expect wrong expansions of ambiguous abbreviations, wrong forms of rare
-names, and errors that Hyman's own text carries. Short "see entry X" cross-references have no page; entries that
+names, and errors that Hyman's own text carries. In a few entries (Resh Lakish, Rav Sheshet and some others in volume II) the Wikisource text is raw OCR with the two columns mixed; those paragraphs carry a warning. Short "see entry X" cross-references have no page; entries that
 Wikisource has not transcribed yet (scan only) are listed in gray.
 
 ## Reviewed sample entries
