@@ -8,19 +8,21 @@ Site: https://ezrabrand.github.io/hyman-toldot-translation/
 
 The project has two parts:
 
-1. **Machine translation of all entries** ([`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/)), from
-   20-Nov-2026, work in progress. Every entry that is transcribed on Wikisource, translated paragraph by paragraph with
-   Gemini 4 Argon and shown next to the Hebrew. **Not reviewed.**
+1. **Machine translation of all entries** ([`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/)),
+   **complete as of 20-Nov-2026**: all 1,889 entries that are transcribed on Wikisource (about 285,000 Hebrew words),
+   translated paragraph by paragraph with Gemini 4 Argon and shown next to the Hebrew, for $13.55 in all.
+   **Not reviewed.** Wikisource has no entries yet for the letters Mem, Ayin and Pe, and only 18 for Yod; rerunning
+   the pipeline adds new entries when they are transcribed.
 2. **Reviewed sample entries** (02-Nov-2026): two entries translated with Claude and checked, with a summary at the top
    and each quoted source as a quote block.
 
 ## Status
 
 <!-- status:start -->
-As of 20-Nov-2026 15:16 (Israel time).
+As of 20-Nov-2026 18:45 (Israel time).
 
 - Wikisource pages fetched: 2,242 of 2,242 (entry pages plus 22 letter index pages).
-- Entries with an English page: **1,889**. Translation cost so far: $13.55.
+- Entries with an English page: **1,889**. Translation cost (including the number-check re-translation): $13.55.
 
 | Letter | Entries fetched | With text | Translated | Hebrew characters |
 |---|---|---|---|---|

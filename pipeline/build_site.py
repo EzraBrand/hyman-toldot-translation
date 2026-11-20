@@ -40,7 +40,7 @@ h1{font-size:1.9rem;margin:0 0 2px;color:var(--accent)}
 .tr{color:var(--gray)}
 .ocrnote{display:block;font-family:system-ui,-apple-system,\"Segoe UI\",sans-serif;font-size:.8rem;color:#a33;margin-bottom:4px}
 .missing{color:var(--muted);font-style:italic}
-@media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}.row .he{order:-1}}
 footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .letter{margin:2em 0 .4em;color:var(--accent);font-size:1.25rem}
 ul.idx{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
@@ -202,7 +202,7 @@ def write_status(rows: list[dict], built_ids: set) -> None:
     cost = sum(json.loads(f.read_text(encoding="utf-8")).get("cost", 0) for f in (ROOT / "data" / "en").glob("*.json"))
     lines = [f"As of {datetime.datetime.now().strftime('%d-%b-%Y %H:%M')} (Israel time).", "",
              f"- Wikisource pages fetched: {n_saved:,} of {n_pages:,} (entry pages plus 22 letter index pages).",
-             f"- Entries with an English page: **{len(built_ids):,}**. Translation cost so far: ${cost:.2f}.", "",
+             f"- Entries with an English page: **{len(built_ids):,}**. Translation cost (including the number-check re-translation): ${cost:.2f}.", "",
              "| Letter | Entries fetched | With text | Translated | Hebrew characters |", "|---|---|---|---|---|"]
     for letter, name in LETTER_NAMES.items():
         rs = [r for r in rows if r["letter"] == letter]
