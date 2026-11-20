@@ -9,7 +9,15 @@ Site: https://ezrabrand.github.io/hyman-toldot-translation/
 | R' Abba (stam) | [r-abba-stam.html](https://ezrabrand.github.io/hyman-toldot-translation/r-abba-stam.html) | Short entry; complete |
 | R' Yoḥanan | [r-yohanan.html](https://ezrabrand.github.io/hyman-toldot-translation/r-yohanan.html) | Long entry; only pp. 236–240 of pp. 236–255 are transcribed on Wikisource |
 
-## Pipeline
+## Machine translation of all entries (from 20-Nov-2026)
+
+[`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/): every entry transcribed on Wikisource, translated
+paragraph by paragraph with Gemini 4 Argon (via OpenRouter) and shown next to the Hebrew. Not reviewed. Code in
+[`pipeline/`](pipeline/): `fetch_wikisource.py` (API, 20 entries per parse call), `extract.py` (clean paragraphs, book
+order), `translate.py` (Argon, resumable), `build_site.py` (pages). The model test of 20-Nov-2026 (7 models, 2 entries)
+is in [`pipeline/README.md`](pipeline/README.md).
+
+## Pipeline of the reviewed entries
 
 1. Take the Hebrew entry from Wikisource.
 2. Translate it into English, with abbreviations written out.

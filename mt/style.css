@@ -1,0 +1,25 @@
+:root{--bg:#faf8f4;--text:#222;--muted:#666;--accent:#7a4b1e;--rule:#ddd5c8;--note-bg:#f6efe2;--note-border:#b8894f;--gray:#8a8378}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1b19;--text:#e6e2da;--muted:#a39d92;--accent:#e0b07a;--rule:#3a3631;--note-bg:#2a2723;--note-border:#a07a48;--gray:#8f897f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.6 Georgia,"Times New Roman",serif}
+main{max-width:1100px;margin:0 auto;padding:32px 16px 80px}
+a{color:var(--accent)}
+h1{font-size:1.9rem;margin:0 0 2px;color:var(--accent)}
+.he-title{direction:rtl;font-family:"Frank Ruehl CLM","FrankRuehl","David","SBL Hebrew","Times New Roman",serif;font-size:1.35rem;color:var(--muted);margin:0 0 14px}
+.nav{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.88rem;color:var(--muted);margin:0 0 18px}
+.note{background:var(--note-bg);border-left:4px solid var(--note-border);padding:10px 16px;border-radius:4px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.88rem;line-height:1.5;margin:0 0 26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.he{direction:rtl;text-align:right;font-family:"Frank Ruehl CLM","FrankRuehl","David","SBL Hebrew","Times New Roman",serif;font-size:1.2rem;line-height:1.7}
+.en p,.he p{margin:0}
+.row.head .en{font-weight:bold;color:var(--accent)} .row.head .he{font-weight:bold}
+.tr{color:var(--gray)}
+.missing{color:var(--muted);font-style:italic}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.letter{margin:2em 0 .4em;color:var(--accent);font-size:1.25rem}
+ul.idx{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+ul.idx li{break-inside:avoid;padding:3px 0;font-size:1rem}
+ul.idx .hn{direction:rtl;unicode-bidi:isolate;color:var(--muted);font-family:"Frank Ruehl CLM","David","SBL Hebrew",serif;font-size:1.05rem}
+ul.idx li.xref{color:var(--muted);font-size:.9rem}
+@media (max-width:760px){ul.idx{columns:1}}
+#q{width:100%;max-width:420px;font-size:1rem;padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--text);margin:8px 0 4px}
