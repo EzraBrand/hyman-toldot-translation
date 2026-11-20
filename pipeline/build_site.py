@@ -46,6 +46,7 @@ ul.idx li{break-inside:avoid;padding:3px 0;font-size:1rem}
 ul.idx .hn{direction:rtl;unicode-bidi:isolate;color:var(--muted);font-family:"Frank Ruehl CLM","David","SBL Hebrew",serif;font-size:1.05rem}
 ul.idx li.xref{color:var(--muted);font-size:.9rem}
 @media (max-width:760px){ul.idx{columns:1}}
+.wc{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.78rem;color:var(--muted);white-space:nowrap}
 #q{width:100%;max-width:420px;font-size:1rem;padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--text);margin:8px 0 4px}
 """
 
@@ -85,6 +86,11 @@ def page(title: str, body: str, desc: str) -> str:
 </body>
 </html>
 """
+
+
+def words(r: dict) -> int:
+    """Hebrew word count of the entry text (heading excluded)."""
+    return sum(len(p.split()) for p in r["paras"] if not p.startswith("## "))
 
 
 def en_title(r: dict, en: list) -> str:
@@ -140,7 +146,8 @@ def main():
            f'<a href="{ws_url("תולדות תנאים ואמוראים")}">Hebrew on Wikisource</a></p>',
            f'<div class="note">{len(built)} entries in English, machine-translated by {MODEL_NAME} from the Hebrew Wikisource '
            'text, paragraph by paragraph next to the Hebrew. Not reviewed. Gray entries are short cross-references '
-           '("see entry …") or entries not transcribed on Wikisource yet.</div>',
+           '("see entry …") or entries not transcribed on Wikisource yet. The number after each entry is its length '
+           'in Hebrew words.</div>',
            '<input id="q" type="search" placeholder="Filter by English or Hebrew name…" aria-label="Filter entries">']
     for letter in LETTER_NAMES:
         rs = [r for r in rows if r["letter"] == letter]
@@ -150,7 +157,8 @@ def main():
         for r in rs:
             if r["pageid"] in built_ids:
                 out.append(f'<li><a href="{r["pageid"]}.html">{esc(titles[r["pageid"]])}</a> '
-                           f'<span class="hn">{esc(r["name"])}</span></li>')
+                           f'<span class="hn">{esc(r["name"])}</span> '
+                           f'<span class="wc" title="Hebrew words">{words(r):,} words</span></li>')
             else:
                 txt = " ".join(p for p in r["paras"] if not p.startswith("## "))
                 if r["chars"] >= MIN_CHARS:

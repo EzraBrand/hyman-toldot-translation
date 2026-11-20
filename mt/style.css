@@ -22,4 +22,5 @@ ul.idx li{break-inside:avoid;padding:3px 0;font-size:1rem}
 ul.idx .hn{direction:rtl;unicode-bidi:isolate;color:var(--muted);font-family:"Frank Ruehl CLM","David","SBL Hebrew",serif;font-size:1.05rem}
 ul.idx li.xref{color:var(--muted);font-size:.9rem}
 @media (max-width:760px){ul.idx{columns:1}}
+.wc{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.78rem;color:var(--muted);white-space:nowrap}
 #q{width:100%;max-width:420px;font-size:1rem;padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--text);margin:8px 0 4px}
