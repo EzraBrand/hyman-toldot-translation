@@ -17,14 +17,32 @@ The project has two parts:
 ## Status
 
 <!-- status:start -->
-As of 20-Nov-2026 14:26 (Israel time).
+As of 20-Nov-2026 15:08 (Israel time).
 
-- Wikisource pages fetched: 985 of 2,242 (entry pages plus 22 letter index pages).
-- Entries with an English page: **428**. Translation cost so far: $3.55.
+- Wikisource pages fetched: 2,242 of 2,242 (entry pages plus 22 letter index pages).
+- Entries with an English page: **1,889**. Translation cost so far: $13.08.
 
 | Letter | Entries fetched | With text | Translated | Hebrew characters |
 |---|---|---|---|---|
-| Alef (א) | 544 | 461 | 428 | 475,638 |
+| Alef (א) | 727 | 626 | 626 | 593,976 |
+| Bet (ב) | 256 | 205 | 205 | 85,065 |
+| Gimel (ג) | 63 | 55 | 55 | 55,664 |
+| Dalet (ד) | 67 | 59 | 59 | 32,127 |
+| He (ה) | 115 | 105 | 105 | 104,144 |
+| Vav (ו) | 5 | 4 | 4 | 517 |
+| Zayin (ז) | 100 | 90 | 90 | 67,853 |
+| Ḥet (ח) | 353 | 315 | 315 | 184,050 |
+| Tet (ט) | 39 | 36 | 36 | 20,453 |
+| Yod (י) | 18 | 17 | 17 | 21,673 |
+| Kaf (כ) | 39 | 36 | 36 | 25,031 |
+| Lamed (ל) | 10 | 6 | 6 | 9,281 |
+| Nun (נ) | 8 | 6 | 6 | 654 |
+| Samekh (ס) | 73 | 60 | 60 | 25,635 |
+| Tsadi (צ) | 9 | 7 | 7 | 904 |
+| Qof (ק) | 39 | 26 | 26 | 7,132 |
+| Resh (ר) | 185 | 137 | 137 | 152,736 |
+| Shin (ש) | 45 | 39 | 39 | 65,832 |
+| Tav (ת) | 66 | 60 | 60 | 18,673 |
 <!-- status:end -->
 
 ## Machine translation: how it is made
