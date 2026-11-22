@@ -19,7 +19,7 @@ The project has two parts:
 ## Status
 
 <!-- status:start -->
-As of 22-Nov-2026 20:52 (Israel time).
+As of 22-Nov-2026 21:08 (Israel time).
 
 - Wikisource pages fetched: 2,242 of 2,242 (entry pages plus 22 letter index pages).
 - Entries with an English page: **1,889**. Translation cost (including the number-check re-translation): $13.55.
@@ -99,4 +99,4 @@ Conventions: text in (parentheses) is Hyman's; text in [square brackets], shown 
 
 ## License
 
-Translations and code: [MIT](LICENSE). Hyman's 1910 Hebrew text is in the public domain.
+Translations: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (see `LICENSE-TEXT`). Code: [MIT](LICENSE). Hyman's 1910 Hebrew text is in the public domain.
