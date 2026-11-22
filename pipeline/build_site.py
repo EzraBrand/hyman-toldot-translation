@@ -125,8 +125,8 @@ def main():
         body = [f'<h1>{esc(titles[r["pageid"]])}</h1>',
                 f'<p class="he-title">{esc(r["name"])}</p>',
                 f'<p class="nav">Letter {LETTER_NAMES.get(r["letter"], r["letter"])} · ' + " · ".join(nav) + "</p>",
-                f'<div class="note">Machine translation ({MODEL_NAME}), not reviewed. Hyman\'s own (parentheses) are '
-                f'kept; [gray brackets] are the translator\'s additions. Check every reading against the Hebrew.</div>']
+                f'<div class="note">Machine translation ({MODEL_NAME}). Hyman\'s own (parentheses) are '
+                f'kept; [gray brackets] are the translator\'s additions.</div>']
         for j, he in enumerate(r["paras"]):
             head = he.startswith("## ")
             if head and j == 0:
@@ -150,7 +150,7 @@ def main():
            '<p class="nav"><a href="../index.html">About this translation</a> · '
            f'<a href="{ws_url("תולדות תנאים ואמוראים")}">Hebrew on Wikisource</a></p>',
            f'<div class="note">{len(built)} entries in English, machine-translated by {MODEL_NAME} from the Hebrew Wikisource '
-           'text, paragraph by paragraph next to the Hebrew. Not reviewed. Gray entries are short cross-references '
+           'text, paragraph by paragraph next to the Hebrew. Gray entries are short cross-references '
            '("see entry …") or entries not transcribed on Wikisource yet. The number after each entry is its length '
            'in Hebrew words.</div>',
            '<input id="q" type="search" placeholder="Filter by English or Hebrew name…" aria-label="Filter entries">']
