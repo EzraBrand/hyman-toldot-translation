@@ -4,11 +4,11 @@ English translation of Aaron Hyman, *Toldot Tannaim ve-Amoraim* (London, 1910), 
 Tannaim and Amoraim. The Hebrew text is from
 [Hebrew Wikisource](https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D).
 
-Site: https://ezrabrand.github.io/hyman-toldot-translation/
+Site: https://openseforim.org/hyman/
 
 The project has two parts:
 
-1. **Machine translation of all entries** ([`mt/`](https://ezrabrand.github.io/hyman-toldot-translation/mt/)),
+1. **Machine translation of all entries** ([`mt/`](https://openseforim.org/hyman/mt/)),
    **complete as of 20-Nov-2026**: all 1,889 entries that are transcribed on Wikisource (about 285,000 Hebrew words),
    translated paragraph by paragraph with Gemini 4 Argon and shown next to the Hebrew, for $13.55 in all.
    **Not reviewed.** Wikisource has no entries yet for the letters Mem, Ayin and Pe, and only 18 for Yod; rerunning
@@ -77,8 +77,8 @@ Wikisource has not transcribed yet (scan only) are listed in gray.
 
 | Entry | Page | Note |
 |---|---|---|
-| R' Abba (stam) | [r-abba-stam.html](https://ezrabrand.github.io/hyman-toldot-translation/r-abba-stam.html) | Short entry; complete |
-| R' Yoḥanan | [r-yohanan.html](https://ezrabrand.github.io/hyman-toldot-translation/r-yohanan.html) | Long entry; only pp. 236–240 of pp. 236–255 are transcribed on Wikisource |
+| R' Abba (stam) | [r-abba-stam.html](https://openseforim.org/hyman/r-abba-stam.html) | Short entry; complete |
+| R' Yoḥanan | [r-yohanan.html](https://openseforim.org/hyman/r-yohanan.html) | Long entry; only pp. 236–240 of pp. 236–255 are transcribed on Wikisource |
 
 How they were made:
 
@@ -91,10 +91,10 @@ Conventions: text in (parentheses) is Hyman's; text in [square brackets], shown 
 
 ## Related projects
 
-- [lewysohn-zoologie](https://github.com/EzraBrand/lewysohn-zoologie): Lewysohn, *Die Zoologie des Talmuds* (1858), OCR and translation
+- [lewysohn-zoologie](https://github.com/openseforim/lewysohn): Lewysohn, *Die Zoologie des Talmuds* (1858), OCR and translation
 - [talmud-zoology-factcheck](https://github.com/EzraBrand/talmud-zoology-factcheck): zoological claims of the Talmud checked against modern zoology
-- [low-flora](https://github.com/EzraBrand/low-flora): Löw, *Die Flora der Juden*, OCR and translation pilot
-- [bochart-hierozoicon](https://github.com/EzraBrand/bochart-hierozoicon): Bochart, *Hierozoicon*, pilot on the shafan
+- [low-flora](https://github.com/openseforim/loew): Löw, *Die Flora der Juden*, OCR and translation pilot
+- [bochart-hierozoicon](https://github.com/openseforim/bochart): Bochart, *Hierozoicon*, pilot on the shafan
 - [abba-to-zebedee](https://github.com/EzraBrand/abba-to-zebedee): naming conventions in the Mishnah, Talmud and Midrash
 
 ## License

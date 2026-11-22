@@ -82,7 +82,7 @@ def page(title: str, body: str, desc: str) -> str:
 <footer>
   <p>Aaron Hyman, <em>Toldot Tannaim ve-Amoraim</em> (London, 1910). Hebrew text from Hebrew Wikisource (public domain).
   English: machine translation by {MODEL_NAME}, not reviewed. Code and translations: MIT license.
-  <a href="https://github.com/EzraBrand/hyman-toldot-translation">GitHub repository</a>.</p>
+  <a href="https://github.com/openseforim/hyman">GitHub repository</a>.</p>
 </footer>
 </main>
 </body>
