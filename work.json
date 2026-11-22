@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "slug": "hyman",
+  "order": 40,
+  "kind": "translation",
+  "title": "Aaron Hyman, Toldot Tannaim ve-Amoraim",
+  "short_title": "Toldot Tannaim ve-Amoraim",
+  "title_he": "תולדות תנאים ואמוראים",
+  "author": "Aaron Hyman (1863–1937)",
+  "status_label": "Machine translation + reviewed samples",
+  "summary": "The biographical dictionary of the Talmudic sages: a machine translation of all 1,889 entries, and reviewed sample entries.",
+  "base_edition": {
+    "label": "London 1910, text from Hebrew Wikisource",
+    "scan_url": "https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D"
+  },
+  "method": "Machine translation paragraph by paragraph (Gemini via OpenRouter), shown next to the Hebrew; two sample entries translated with Claude and checked.",
+  "cite": "Aaron Hyman, Toldot Tannaim ve-Amoraim, English translation, ed. Ezra Brand. Open Seforim",
+  "url": "https://openseforim.org/hyman/",
+  "repo": "https://github.com/openseforim/hyman",
+  "licence": {
+    "name": "MIT License (transcription, translation and code)",
+    "url": "https://github.com/openseforim/hyman/blob/main/LICENSE"
+  }
+}

@@ -75,6 +75,9 @@ def page(title: str, body: str, desc: str) -> str:
 <title>{esc(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="stylesheet" href="style.css">
+<script>var osT=localStorage.getItem('os-theme');osT&&osT!='auto'&&document.documentElement.setAttribute('data-theme',osT)</script>
+<link rel="stylesheet" href="/assets/os.css">
+<script src="/assets/os.js" defer></script>
 </head>
 <body>
 <main>
