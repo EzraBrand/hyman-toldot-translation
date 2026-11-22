@@ -145,7 +145,7 @@ def main():
             body.append(f'<div class="row{" head" if head else ""}" id="p{j}"><div class="en"><p>{e_html}</p></div>'
                         f'<div class="he" lang="he"><p>{esc(he_t)}</p></div></div>')
         body.append(f'<p class="nav" style="margin-top:20px">{" · ".join(pn)}</p>')
-        (MT / f'{r["pageid"]}.html').write_text(page(f'{titles[r["pageid"]]} ({r["name"]}) — Hyman, Toldot Tannaim ve-Amoraim',
+        (MT / f'{r["pageid"]}.html').write_text(page(f'{titles[r["pageid"]]} · {r["name"]} — Hyman, Toldot Tannaim ve-Amoraim',
                                                      "\n".join(body), f'Hyman on {titles[r["pageid"]]}: English machine translation and Hebrew.'),
                                                encoding="utf-8")
     # index
