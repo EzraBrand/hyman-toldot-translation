@@ -1,0 +1,33 @@
+{
+  "title": "Aaron Hyman, Toldot Tannaim ve-Amoraim: reading edition with English translation",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "description": "<p>The biographical dictionary of the Talmudic sages: a machine translation of all 1,889 entries, and reviewed sample entries.</p><p>Machine translation paragraph by paragraph (Gemini via OpenRouter), shown next to the Hebrew; two sample entries translated with Claude and checked.</p><p>Read online: <a href=\"https://openseforim.org/hyman/\">https://openseforim.org/hyman/</a></p>",
+  "creators": [
+    {
+      "name": "Brand, Ezra"
+    }
+  ],
+  "license": "cc-by-sa-4.0",
+  "access_right": "open",
+  "keywords": [
+    "Judaica",
+    "Hebrew",
+    "digital humanities",
+    "translation",
+    "digital edition"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://openseforim.org/hyman/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://he.wikisource.org/wiki/%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%AA%D7%A0%D7%90%D7%99%D7%9D_%D7%95%D7%90%D7%9E%D7%95%D7%A8%D7%90%D7%99%D7%9D",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-book"
+    }
+  ]
+}

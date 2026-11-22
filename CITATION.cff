@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this edition, please cite it as below."
+title: "Aaron Hyman, Toldot Tannaim ve-Amoraim: reading edition with English translation"
+type: dataset
+authors:
+  - family-names: Brand
+    given-names: Ezra
+abstract: "The biographical dictionary of the Talmudic sages: a machine translation of all 1,889 entries, and reviewed sample entries. Machine translation paragraph by paragraph (Gemini via OpenRouter), shown next to the Hebrew; two sample entries translated with Claude and checked."
+license: CC-BY-SA-4.0
+url: "https://openseforim.org/hyman/"
+repository-code: "https://github.com/openseforim/hyman"
+keywords:
+  - "Judaica"
+  - "Hebrew"
+  - "digital humanities"
+  - "translation"
+  - "digital edition"
