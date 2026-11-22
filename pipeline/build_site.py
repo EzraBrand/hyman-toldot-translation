@@ -82,11 +82,6 @@ def page(title: str, body: str, desc: str) -> str:
 <body>
 <main>
 {body}
-<footer>
-  <p>Aaron Hyman, <em>Toldot Tannaim ve-Amoraim</em> (London, 1910). Hebrew text from Hebrew Wikisource (public domain).
-  English: machine translation by {MODEL_NAME}, not reviewed. Translations: CC BY-SA 4.0. Code: MIT.
-  <a href="https://github.com/openseforim/hyman">GitHub repository</a>.</p>
-</footer>
 </main>
 </body>
 </html>
@@ -150,9 +145,9 @@ def main():
                                                encoding="utf-8")
     # index
     built_ids = {r["pageid"] for r in built}
-    out = ['<h1>Hyman, <em>Toldot Tannaim ve-Amoraim</em>: machine translation</h1>',
+    out = ['<h1>Aaron Hyman, <em>Toldot Tannaim ve-Amoraim</em>: machine translation</h1>',
            '<p class="he-title">אהרן הימן, תולדות תנאים ואמוראים</p>',
-           '<p class="nav"><a href="../index.html">Project home</a> · '
+           '<p class="nav"><a href="../index.html">About this translation</a> · '
            f'<a href="{ws_url("תולדות תנאים ואמוראים")}">Hebrew on Wikisource</a></p>',
            f'<div class="note">{len(built)} entries in English, machine-translated by {MODEL_NAME} from the Hebrew Wikisource '
            'text, paragraph by paragraph next to the Hebrew. Not reviewed. Gray entries are short cross-references '
