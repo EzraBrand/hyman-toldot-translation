@@ -6,6 +6,8 @@ Tannaim and Amoraim. The Hebrew text is from
 
 Site: https://openseforim.org/hyman/
 
+Cite as: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24458131.svg)](https://doi.org/10.5281/zenodo.24458131) (Zenodo; this DOI always points to the newest release)
+
 The project has two parts:
 
 1. **Machine translation of all entries** ([`mt/`](https://openseforim.org/hyman/mt/)),
